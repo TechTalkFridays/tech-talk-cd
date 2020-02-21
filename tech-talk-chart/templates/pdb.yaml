@@ -1,0 +1,10 @@
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ .Values.Name }}
+  namespace: {{ .Values.Namespace }}
+spec:
+  maxUnavailable: 33%
+  selector:
+    matchLabels:
+      app: {{ .Values.Name }}
