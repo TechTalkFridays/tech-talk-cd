@@ -11,5 +11,5 @@ spec:
     port: 80
     targetPort: 5000
   selector:
-    app: {{ .Release.Name }}
+    name: {{ .Release.Name }}
   sessionAffinity: ClientIP
