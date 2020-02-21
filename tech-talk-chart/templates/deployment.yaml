@@ -2,16 +2,16 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: {{ .Release.name }}
+  name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
 spec:
   selector:
     matchLabels:
-      name: {{ .Release.name }}
+      name: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        name: {{ .Release.name }}
+        name: {{ .Release.Name }}
     spec:
       containers:
       - name: tech-talk
