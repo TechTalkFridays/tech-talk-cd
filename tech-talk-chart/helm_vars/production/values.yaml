@@ -2,7 +2,9 @@
 name: tech-talk
 image: registry.gitlab.com/thereisnocowlevel/dead_simple/develop:44a75c5c7fa3573e1ca5492b0b5a809636f3ec2c
 exposedHost: tech-talk.com
-replicas: 1
+minReplicas: 1
+maxReplicas: 2
+targetCPUUtil: 50
 resources:
   limits:
     cpu: 0.2
